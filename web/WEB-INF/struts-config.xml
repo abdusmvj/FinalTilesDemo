@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="LoginBean" type="com.pcs.formbean.LoginBean"/>
+        <form-bean name="RegisterBean" type="com.pcs.formbean.RegisterBean"/>
+    
+    </form-beans>
+    
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/registerlink.do" name="RegisterBean" path="/register" scope="request" type="com.pcs.action.UserregisAction" validate="true">
+                <forward name="success" path="nextpage" />
+        </action>
+        <action input="/loginlink.do" name="LoginBean" path="/userloginpath" scope="request" type="com.pcs.action.UserLoginActiom" validate="true">
+           <forward name="success" path="loginsuccss" />
+           <forward name="failure" path="loginfail" />
+        </action>
+  <!--   For register button click validator purpose action take place .[parameter is mapping to tiles defs name]
+        <action  input="/UserView/userregister.jsp" type="org.apache.struts.actions.ForwardAction" parameter="registerbutton" /> -->
+       
+        <action path="/Welcome" forward="BLayout"/>
+        <action  path="/newbody" type="org.apache.struts.actions.ForwardAction" parameter="new1" />
+        <action  path="/firstmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn1" />
+        <action  path="/secondmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn2" />
+        <action  path="/thirdmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn3" />
+        <action  path="/fourthmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn4" />
+        <action  path="/fifthmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn5" />
+        <action  path="/sixthmenu" type="org.apache.struts.actions.ForwardAction" parameter="formn6" />
+        <!-- for title nav  bar login link action take place here -->
+        <action  path="/loginlink" type="org.apache.struts.actions.ForwardAction" parameter="login1" />
+        <!-- for title nav  bar register link action take place here -->
+        <action  path="/registerlink" type="org.apache.struts.actions.ForwardAction" parameter="register1" />
+        <!-- for title nav  bar home link action take place here -->
+        <action  path="/home" type="org.apache.struts.actions.ForwardAction" parameter="hometiles" />
+        <!-- for title nav  bar Profile link action take place here -->
+        <action  path="/profile" type="org.apache.struts.actions.ForwardAction" parameter="profiletiles" />
+        <!-- for title nav  bar Carrier link action take place here -->
+        <action  path="/carrier" type="org.apache.struts.actions.ForwardAction" parameter="carriertiles" />
+        <!-- for title nav  bar Carrier link action take place here -->
+        <action  path="/about" type="org.apache.struts.actions.ForwardAction" parameter="abouttiles" />
+        
+        
+         <!-- for Core java that have  Next button  link action take place here -->
+        <action  path="/next" type="org.apache.struts.actions.ForwardAction" parameter="nexttiles" />
+       
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

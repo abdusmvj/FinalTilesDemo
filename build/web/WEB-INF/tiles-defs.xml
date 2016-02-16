@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="BLayout" path="/BaseLayout.jsp">
+         <put name="header" value="/header.jsp" />
+         <put name="leftmenu" value="/leftmenu.jsp" />
+         <put name="body" value="/body.jsp" />
+         <put name="footer" value="/footer.jsp" />  
+         <put name="titlebar" value="/titlebar.jsp" />  
+ </definition>
+ <definition name="new1" extends="BLayout">
+    <put name="body" value="/insidebody.jsp" />
+ </definition>
+ 
+ <definition name="formn1" extends="BLayout">
+    <put name="body" value="/lmContents/menu1corejava.jsp" />
+ </definition>
+ <definition name="formn2" extends="BLayout">
+    <put name="body" value="/lmContents/menu2ajava.jsp" />
+ </definition>
+ <definition name="formn3" extends="BLayout">
+    <put name="body" value="/lmContents/menu3jdbc.jsp" />
+ </definition>
+ <definition name="formn4" extends="BLayout">
+    <put name="body" value="/lmContents/menu4servlet.jsp" />
+ </definition>
+ <definition name="formn5" extends="BLayout">
+    <put name="body" value="/lmContents/menu5jsp.jsp" />
+ </definition>
+ <definition name="formn6" extends="BLayout">
+    <put name="body" value="/lmContents/menu6struts.jsp" />
+ </definition>
+ 
+ <definition name="login1" extends="BLayout">
+    <put name="body" value="/UserView/UserLogin.jsp" />
+ </definition>
+ <definition name="register1" extends="BLayout">
+    <put name="body" value="/UserView/userregister.jsp" />
+ </definition>
+ 
+ <!--
+     for register button click validator purpose
+ -->
+<definition name="nextpage" extends="BLayout">
+    <put name="body" value="/UserView/registersuccess.jsp" /> 
+ </definition>  
+ 
+ <definition name="loginfail" extends="BLayout">
+    <put name="body" value="/UserView/UserLogin.jsp" /> 
+ </definition> 
+ <definition name="loginsuccss" extends="BLayout">
+    <put name="body" value="/UserView/userLoginsuccess.jsp" /> 
+ </definition> 
+ 
+ <!-- for title nav  bar home tiles def link action take place here -->
+ 
+  <definition name="hometiles" extends="BLayout">
+    <put name="body" value="/UserView/homeview.jsp" /> 
+ </definition> 
+ 
+ <!-- for title nav  bar home tiles def link action take place here -->
+ 
+  <definition name="profiletiles" extends="BLayout">
+    <put name="body" value="/UserView/profileview.jsp" /> 
+ </definition> 
+ 
+ <!-- for title nav  bar home tiles def link action take place here -->
+ 
+  <definition name="carriertiles" extends="BLayout">
+    <put name="body" value="/UserView/carrierview.jsp" /> 
+ </definition> 
+ 
+ <!-- for title nav  bar home tiles def link action take place here -->
+ 
+  <definition name="abouttiles" extends="BLayout">
+    <put name="body" value="/UserView/aboutview.jsp" /> 
+ </definition> 
+ 
+ <!-- for Core java that have  Next  tiles def page  -->
+ 
+  <definition name="nexttiles" extends="BLayout">
+    <put name="body" value="/UserView/nextview.jsp" /> 
+ </definition> 
+ 
+ 
+ 
+     
+  
+
+
+
+</tiles-definitions>
