@@ -50,9 +50,15 @@
         <action  path="/profile" type="org.apache.struts.actions.ForwardAction" parameter="profiletiles" />
         <!-- for title nav  bar Carrier link action take place here -->
         <action  path="/carrier" type="org.apache.struts.actions.ForwardAction" parameter="carriertiles" />
-        <!-- for title nav  bar Carrier link action take place here -->
+        <!-- for title nav  bar about link action take place here -->
         <action  path="/about" type="org.apache.struts.actions.ForwardAction" parameter="abouttiles" />
         
+         <!-- for title nav  bar contactus link action take place here -->
+        <action  path="/contactus" type="org.apache.struts.actions.ForwardAction" parameter="contactustiles" />
+        
+        
+        <!-- for title nav  bar search link action take place here -->
+        <action  path="/search" type="org.apache.struts.actions.ForwardAction" parameter="searchnav" />
         
          <!-- for Core java that have  Next button  link action take place here -->
         <action  path="/next" type="org.apache.struts.actions.ForwardAction" parameter="nexttiles" />

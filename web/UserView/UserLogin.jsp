@@ -12,6 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <title>JSP Page</title>
         
        
@@ -19,32 +20,52 @@
     </head>
     <body>
         <h3 style="color: blue;">Please Login here for Existing User!</h3>
-        
-        
-    	<html:errors />
+<!--        for through the password incorrect message-->
         <div style="color:red">
-        <%
-                String message = (String)request.getAttribute("userloginmsg");
-        %>
-        <h3>Welcome <%= message %></h3>
+        <%String msg=(String)request.getAttribute("userloginmsg");
+                if(msg!=null || msg=="")
+                {
+                    out.println(msg);
+                }
+               %>
     </div>
+    	<html:errors />
+        
     
-     <div style="margin-left:10px;" class="well">
+     <!--<div style="margin-left:10px;" class="well">-->
+     <div class="container" style="padding:20px;">
         <html:form action="userloginpath"> 
-                <table border="1">
-                    
-                     <tr><td>Username:</td><td><html:text property="username" /></td></tr>
-                     <tr><td>Enter Password:</td><td><html:password property="password" /></td></tr>
-                     <tr><th colspan="2"><html:submit value="Login"/></th></tr>
-                    
-                </table>
+                <!--<table border="1">-->
+                <div style="border: 2px solid #ccc; padding: 30px; width: 70%;">
+                <div class="row">
+                    <div class="col-md-2 form-group"><label>Username:</label></div>
+                    <div class="col-md-3 form-group"><html:text property="username" /></div>
+                    <div class="col-md-7" style="color:red;"><html:errors property="username"></html:errors></div>
+                </div>
+                     
+                <div class="row">
+                    <div class="col-md-2 form-group"><label>Password:</label></div>
+                    <div class="col-md-3 form-group"><html:password property="password" /></div>
+                    <div class="col-md-7" style="color:red;"><html:errors property="password"></html:errors></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"><html:submit value="Login"/></div>
+                </div>
+                </div>
+                <!--</table>-->
                     
            </html:form> 
-         </div>
+         <!--</div>-->
+     
+    <div>
             <a href="forgetlink.do">Forget Password</a><br>
            <a href="registerlink.do">For New User Register First</a>
+    </div>
+    </div>
+    
            
-           
+          
             
       
        

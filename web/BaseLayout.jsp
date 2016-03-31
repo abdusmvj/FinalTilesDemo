@@ -5,17 +5,16 @@
 --%>
 
 <%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
-
         <table border=2 width="100%">
             <tr>
-                    <td bgcolor="pink" width="943px" height="30px" colspan="2">
-                    <img src="images/pcs1.png" alt="Header image name" height="40" width="705">
+                    <td bgcolor="pink" width="843px" height="40px" colspan="2">
+<!--                    <img src="images/pcs1.png" alt="Header image name" height="30" width="705">-->
                     <tiles:insert attribute="header"/>
                 </td>
             </tr>
             <!-- for title-->
             <tr>
-                <td width="943px" height="10px" colspan="2" >
+                <td width="843px" height="15px" colspan="2" >
                     <tiles:insert attribute="titlebar"/>
                 </td>
                 
@@ -30,7 +29,7 @@
             </tr>
             
              <tr>
-                     <td bgcolor="lightgreen" width="943px" height="60px" colspan="2">
+                     <td bgcolor="lightgreen" width="843px" height="60px" colspan="2">
                     <tiles:insert attribute="footer"/>
                 </td>
             </tr>

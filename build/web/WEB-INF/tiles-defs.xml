@@ -93,22 +93,35 @@
     <put name="body" value="/UserView/homeview.jsp" /> 
  </definition> 
  
- <!-- for title nav  bar home tiles def link action take place here -->
+ <!-- for title nav  bar profile tiles def link action take place here -->
  
   <definition name="profiletiles" extends="BLayout">
     <put name="body" value="/UserView/profileview.jsp" /> 
  </definition> 
  
- <!-- for title nav  bar home tiles def link action take place here -->
+ <!-- for title nav  bar carrier tiles def link action take place here -->
  
   <definition name="carriertiles" extends="BLayout">
     <put name="body" value="/UserView/carrierview.jsp" /> 
  </definition> 
  
- <!-- for title nav  bar home tiles def link action take place here -->
+ <!-- for title nav  bar about tiles def link action take place here -->
  
   <definition name="abouttiles" extends="BLayout">
     <put name="body" value="/UserView/aboutview.jsp" /> 
+ </definition> 
+ 
+ 
+ <!-- for title nav  bar Contact Us tiles def link action take place here -->
+ 
+  <definition name="contactustiles" extends="BLayout">
+    <put name="body" value="/UserView/contactus.jsp" /> 
+ </definition>
+ 
+ <!-- for title nav  bar search tiles def link action take place here -->
+ 
+  <definition name="searchnav" extends="BLayout">
+    <put name="body" value="/UserView/searchview.jsp" /> 
  </definition> 
  
  <!-- for Core java that have  Next  tiles def page  -->

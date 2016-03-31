@@ -55,7 +55,7 @@ public class UserregisAction extends org.apache.struts.action.Action {
         System.out.println(mno);
         //for service layer vo bean
         RegisterVOBean vobean=new RegisterVOBean();  //creating object of regidtervobean class
-         vobean.setFirstname1(fname);  //set that one by one field using seeter method
+         vobean.setFirstname1(fname);  //set that one by one field using setter method
          vobean.setLastname1(lname);
          vobean.setEmail1(eml);
          vobean.setUsername1(uname);

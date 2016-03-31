@@ -9,6 +9,7 @@ package com.pcs.action;
 import com.pcs.bean.RegisterVOBean;
 import com.pcs.daoimp.UserLoginCheck;
 import com.pcs.formbean.LoginBean;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -65,7 +66,7 @@ public class UserLoginActiom extends org.apache.struts.action.Action {
                 }
          else
                 {
-                       request.setAttribute("userloginmsg", "Username and password is incorrect! Plese try again!");   
+                        request.setAttribute("userloginmsg", "Username and password is incorrect! Plese try again!");  
                         return mapping.findForward(FAILURE);
                 }
         
