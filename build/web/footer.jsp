@@ -15,7 +15,7 @@
         <center>
             Design And Developed by Abdus!!!!
  
-              <a href="http://javabynataraj.blogspot.com">http://javabynataraj.blogspot.com</a>
+              <a href="http://www.javatpoint.com/">JavaTPoint Site</a>
         </center>
     </body>
 </html>

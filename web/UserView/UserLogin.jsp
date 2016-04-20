@@ -22,7 +22,7 @@
         <h3 style="color: blue;">Please Login here for Existing User!</h3>
 <!--        for through the password incorrect message-->
         <div style="color:red">
-        <%String msg=(String)request.getAttribute("userloginmsg");
+        <% String msg=(String)request.getAttribute("userloginmsg");
                 if(msg!=null || msg=="")
                 {
                     out.println(msg);
@@ -36,10 +36,10 @@
      <div class="container" style="padding:20px;">
         <html:form action="userloginpath"> 
                 <!--<table border="1">-->
-                <div style="border: 2px solid #ccc; padding: 30px; width: 70%;">
+                <div style="border: 2px solid blue; padding: 30px; width: 70%;">
                 <div class="row">
                     <div class="col-md-2 form-group"><label>Username:</label></div>
-                    <div class="col-md-3 form-group"><html:text property="username" /></div>
+                    <div class="col-md-3 form-group"><html:text property="username"/></div>
                     <div class="col-md-7" style="color:red;"><html:errors property="username"></html:errors></div>
                 </div>
                      
@@ -49,7 +49,7 @@
                     <div class="col-md-7" style="color:red;"><html:errors property="password"></html:errors></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-1"></div>
+                    <div class="col-md-2 form-group"></div>
                     <div class="col-md-3"><html:submit value="Login"/></div>
                 </div>
                 </div>

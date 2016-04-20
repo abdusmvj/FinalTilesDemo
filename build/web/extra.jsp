@@ -1,6 +1,6 @@
 <%-- 
-    Document   : footer
-    Created on : 07-Jan-2016, 16:43:00
+    Document   : extra
+    Created on : 31-Mar-2016, 16:03:13
     Author     : Administrator
 --%>
 
@@ -12,10 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <center>
-            Design And Developed by Abdus!!!!
- 
-              <a href="http://www.javatpoint.com/">JavaTPoint Site</a>
-        </center>
+        <h1>Hello World!</h1>
     </body>
 </html>
